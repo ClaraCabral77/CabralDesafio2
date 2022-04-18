@@ -10,12 +10,10 @@ for(let i= 1; i<=10; i++){
 
 let nombre= prompt("Adivina el nombre");
 
-while(nombre === "sofia"){
-    alert("acertaste el nombre")
-    switch (nombre){
-        case "sofia":
-            alert("hola sofia")
-        break;
-    }
+while(nombre != "sofia"){
+   alert("fallaste")
+   let nombre= prompt("Adivina el nombre");
 }
-alert("fallaste")
+alert("Felicitaciones, adivinaste");
+
+

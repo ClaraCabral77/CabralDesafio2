@@ -5,6 +5,10 @@ let ingresarCuotas=parseInt(prompt("¿En cuántas cuotas queres pagar?"));
 
 
 
+let resultado = dividir(ingresarMonto, ingresarCuotas);
+alert(`las cuotas son ${ingresarCuotas} de $${resultado}`);
+
+
 function dividir(ingresarMonto, ingresarCuotas){
 
     if (ingresarCuotas === 1){
@@ -24,15 +28,14 @@ function dividir(ingresarMonto, ingresarCuotas){
     return ingresarMonto / ingresarCuotas;
 }
     else { 
-     alert("No es una cuota valida");
-     return resultado;
+     alert("No es una cuota valida, vuelve a intentarlo");
+     return resultado
      
     }   
     
 }
 
-let resultado = dividir(ingresarMonto, ingresarCuotas);
-alert(`las cuotas son ${ingresarCuotas} de $${resultado}`);
+
 
 
 
