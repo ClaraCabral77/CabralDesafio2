@@ -70,22 +70,21 @@ function agregarProducto(){
 agregarProducto();
 
 
-/*Eliminar un producto*/
+/*Consultar Stock*/
 
 
 
-let productoAEliminar = prompt("¿Qué producto hay que quitar?")
-let indice= productos.indexOf(productoAEliminar)
-if(indice !== -1){
-    productos.splice(indice, 1 )
+let productoAEliminar = prompt("Consultar Stock- Introduzca nombre del producto")
+let indice = productos.findIndex(Producto => Producto.nombre == productoAEliminar) 
+
+
+if(indice > -1){
+
+alert("Este producto se encuentra en stock");
 }
 else{
-    alert("ese producto no existe")
+    alert("este producto no existe")
 }
-console.log(productos)
-
-
-
 
    
 
