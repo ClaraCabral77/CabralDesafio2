@@ -1,5 +1,5 @@
 
-let inputNombre= document.getElementById("form-controlNombre").value= "Juana"
+/*let inputNombre= document.getElementById("form-controlNombre").value= "Juana"
 
 console.log(inputNombre);
 
@@ -9,16 +9,13 @@ console.log(inputApellido);
 
 
 
-/********* */
-
-
 
 let mediosDePago =["Mercado Pago", "Tarjeta débito", "Tarjeta crédito"];
 
 let seleccionForma = document.getElementById("paid")
 
 
-/*opcion nula*/
+/*opcion nula*
 
 let opcionNula = document.createElement("option");
 opcionNula.innerText= "Seleccione forma de pago";
@@ -27,7 +24,7 @@ seleccionForma.append(opcionNula);
 
 
 
-/*Recorre el array*/
+/*Recorre el array*
 
 mediosDePago.forEach((formadepago, indice ) => {
 
@@ -36,12 +33,32 @@ let option = document.createElement("option");
 option.innerText= formadepago;
 option.value= indice;
 
-/* agrego la opcion al select*/
+/* agrego la opcion al select*
 
 seleccionForma.append(option);
 
 
 
-});
+});*/
+
+
+/*Captar información del formulario*/
+
+let formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+    
+    const inputs = e.target.querySelectorAll("input");
+    
+    for(const input of inputs){
+    
+
+        console.log(input.value);
+    }
+
+    });
+
 
 
