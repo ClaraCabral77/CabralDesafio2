@@ -1,23 +1,47 @@
+let productos = [
+  
+    {
+        nombre: "Producto 4",
+        precio: 700,
+        codigo: "P-4",
+    },
+];
 
+let contenedor = document.getElementById("contenedor");
 
+function agregarProductoAHTML (producto) {
 
-/*creo funcion*/
+    let ul = document.createElement("ul");
 
-function loguearse(nombre= "persona"){
-    document.write('<img src="http://placeimg.com/200/200/tech" />')
-    document.write('<img src="http://placeimg.com/200/200/Animals" />')
-    document.write('<img src="http://placeimg.com/200/200/People" />')
-    document.write('<img src="http://placeimg.com/200/200/health" />')
-   
+    let li1 = document.createElement("li");
+    li1.innerText = "Nombre: " + producto.nombre;
+
+    let li2 = document.createElement("li");
+    li2.innerText = "Precio: " + producto.precio;
+
+    let li3 = document.createElement("li");
+    li3.innerText = "Codigo: " + producto.codigo;
+
+    ul.append(li1, li2, li3);
+
+    contenedor.append(ul);
 }
 
+/**
+ * BOTON MOSTRAR UNO SOLO
+ */
+let boton = document.getElementById('evento');
+boton.addEventListener("click", () => {
 
+    if(productos.length > 0) {
 
-/*creo variables*/
+        let producto = productos.pop();
 
-const $eventoBoton= document.getElementById("evento");
+        agregarProductoAHTML(producto);
 
-$eventoBoton.addEventListener("click", ()=> {
-    loguearse();
-  
-})
+    } else {
+        alert("No hay más productos");
+    }
+
+});
+
